@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>About Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+    body, html {
+      height: 100%;
+      line-height: 1.8;
+    }
+    .w3-bar .w3-button {
+      padding: 16px;
+    }
+    .logoText {
+        font-size: 15px;
+        font-family: "Raleway", sans-serif;
+    }
+</style>
+
+<body>
+<!-- Button Section -->
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+        <a href="/home" class="logoText w3-button w3-wide" width="100px">A.E.S.</a>
+        <!-- Right-sided navbar links -->
+        <div class="w3-right w3-hide-small">
+            <a href="/airportEvents" class="w3-button"><i class="fa fa-paper-plane-o"></i>FLIGHTS</a>
+            <a href="/login" class="w3-bar-item w3-button"><i class="fa fa-user"></i>LOG IN</a>
+<!--            <a href="/about" class="w3-bar-item w3-button"><i class="fa fa-question"></i>ABOUT</a>-->
+            <a href="/contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i>CONTACT</a>
+        </div>
+        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+</div>
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 16px" id="about">
+    <h3 class="w3-center">ABOUT US</h3>
+    <p class="w3-center w3-large">Recipe of our company</p>
+    <div class="w3-row-padding w3-center" style="margin-top:64px">
+        <div class="w3-quarter">
+            <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+            <p class="w3-large">Responsive</p>
+            <p>Do not be shy!<br>Contact us, and we will reach you as soon as possible.</p>
+        </div>
+        <div class="w3-quarter">
+            <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+            <p class="w3-large">Passion</p>
+            <p>We love both: <br>time scheduling and helping people.</p>
+        </div>
+        <div class="w3-quarter">
+            <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+            <p class="w3-large">Art</p>
+            <p>Every professional domain can be characterised as an art,<br>if it is properly done. We just chose time scheduling flights.</p>
+        </div>
+        <div class="w3-quarter">
+            <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+            <p class="w3-large">Support</p>
+            <p>We are extremely responsive when in comes to solving problems and patterns. Just let us know what is your<br>situation and we will figure it out together.</p>
+        </div>
+    </div>
+</div>
+<!-- Team Section -->
+<div class="w3-container" style="padding:128px 16px" id="team">
+    <h3 class="w3-center">THE TEAM</h3>
+    <p class="w3-center w3-large">The stars, the geniuses</p>
+    <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+        <div class="w3-col l6 m6 w3-margin-bottom">
+            <div class="w3-center w3-card">
+                <img src="/Images/vlad.jpg" alt="Vlad" style="width:100%">
+                <div class="w3-container">
+                    <h3>Vlad Slavu</h3>
+                    <p class="w3-opacity">CEO & Founder</p>
+                    <p>Time is the most important measurable physical property.</p>
+                    <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+                </div>
+            </div>
+        </div>
+        <div class="w3-col l6 m6 w3-margin-bottom">
+            <div class="w3-center w3-card">
+                <img src="/Images/george.jfif" alt="George" style="width:100%">
+                <div class="w3-container">
+                    <h3>George Petruta</h3>
+                    <p class="w3-opacity">CEO & Founder</p>
+                    <p>So do not waste it!</p>
+                    <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

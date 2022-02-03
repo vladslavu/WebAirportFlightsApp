@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Add event</title>
+    <link type="text/css" rel="stylesheet" href="css/addEvent.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+    body, html {
+      height: 100%;
+      line-height: 1.8;
+    }
+    .w3-bar .w3-button {
+      padding: 16px;
+    }
+    .logoText {
+    font-size: 15px;
+    font-family: "Raleway", sans-serif;
+    }
+</style>
+<body>
+
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+        <a class="logoText w3-button w3-wide" width="100px">A.E.S.</a>
+    </div>
+</div>
+
+<div class='bold-line'></div>
+<div class='container'>
+    <div class='window'>
+        <div class='overlay'></div>
+        <div class='content'>
+            <div class='welcome'>Filter events</div>
+            <div class='subtitle'>Insert the details for the airport event filter</div>
+            <form name="signup" method="post" action="#" th:action="@{/filterList}" th:object = "${eventFilter}">
+                <div class='input-fields'>
+                    <input type="text" th:field="*{startLocation}" name="idAirplane" placeholder="Start location" class='input-line full-width'>
+                    <input type="text" th:field="*{endLocation}" name="start" placeholder="End location" class='input-line full-width'>
+                    <input type="datetime-local" th:field="*{startDate}" name="end" placeholder="2020-04-24 18:25:44" class='input-line full-width'>
+                    <input type="datetime-local" th:field="*{endDate}" name="startLoc" placeholder="startLocation" class='input-line full-width'>
+                </div>
+                <div>
+                    <button class='ghost-round full-width'>Filter</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

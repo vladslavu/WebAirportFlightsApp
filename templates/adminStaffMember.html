@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Staff events</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--===============================================================================================-->
+</head>
+<style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+    body, html {
+      height: 100%;
+      line-height: 1.8;
+    }
+    /* Full height image header */
+    .bgimg-1 {
+      background-position: center;
+      background-size: cover;
+      background-image: url("/Images/homeImage2.jpg");
+      min-height: 100%;
+    }
+    .w3-bar .w3-button {
+      padding: 16px;
+    }
+    .logoText {
+        font-size: 15px;
+        font-family: "Raleway", sans-serif;
+    }
+</style>
+<body>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+        <a href="/administratorPage" class="logoText w3-button w3-wide" width="100px">A.E.S.</a>
+        <!-- Right-sided navbar links -->
+        <div class="w3-right w3-hide-small">
+            <a href="#" onclick="window.history.go(-1);" class="w3-button" style="color: blue"><i class="fa fa-mail-reply"></i>BACK</a>
+            <a href="/logout" class="w3-button">LOGOUT</a>
+            <a href="/adminEventStaffAssignation" class=" w3-button"><i class="fa fa-user"></i>STAFF ASSIGNATION</a>
+            <a href="/adminAirportEventPage" class=" w3-button"><i class="fa fa-paper-plane-o"></i>FLIGHTS</a>
+            <a href="/adminAddEvent" class="w3-button"></i>ADD EVENT</a>
+            <a href="/adminCreateAccount" class="w3-button"></i>CREATE ACCOUNT</a>
+        </div>
+        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+</div>
+
+<div class="limiter">
+    <div class="container-table100">
+        <div class="wrap-table100">
+            <div class="table100 ver2 m-b-110">
+                <table data-vertable="ver2">
+                    <thead>
+                    <tr class="row100 head">
+                        <th class="column100 column1" data-column="column1">Staff member id</th>
+                        <th class="column100 column2" data-column="column2">First name</th>
+                        <th class="column100 column3" data-column="column3">Last name</th>
+                        <th class="column100 column4" data-column="column4">Age</th>
+                        <th class="column100 column5" data-column="column5">Nationality</th>
+                        <th class="column100 column6" data-column="column6">Work experience</th>
+                        <th class="column100 column9" data-column="column9">Delete member</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="row100" th:each="member: ${staffList}">
+                        <td class="column100 column1" data-column="column1" th:text="${member.idStaffMember}"></td>
+                        <td class="column100 column2" data-column="column2" th:text="${member.firstName}"></td>
+                        <td class="column100 column3" data-column="column3" th:text="${member.lastName}"></td>
+                        <td class="column100 column4" data-column="column4" th:text="${member.age}"></td>
+                        <td class="column100 column5" data-column="column5" th:text="${member.nationality}"></td>
+                        <td class="column100 column6" data-column="column6" th:text="${member.workExperience}"></td>
+                        <td class="column100 column9" data-column="column9">
+                            <a th:href="@{/deleteStaffMember/{id}(id=${member.idStaffMember})}" class="btn btn-danger" style="height: 37px;width: 79px">Delete</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--===============================================================================================-->
+<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/bootstrap/js/popper.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+<script src="js/main.js"></script>
+
+</body>
+</html>

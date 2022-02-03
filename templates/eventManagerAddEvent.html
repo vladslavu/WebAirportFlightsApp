@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Add event</title>
+    <link type="text/css" rel="stylesheet" href="css/addEvent.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+    body, html {
+      height: 100%;
+      line-height: 1.8;
+    }
+    .w3-bar .w3-button {
+      padding: 16px;
+    }
+    .logoText {
+    font-size: 15px;
+    font-family: "Raleway", sans-serif;
+    }
+</style>
+<body>
+
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+        <a href="/eventManagerPage" class="logoText w3-button w3-wide" width="100px">A.E.S.</a>
+    </div>
+</div>
+
+<div class='bold-line'></div>
+<div class='container'>
+    <div class='window'>
+        <div class='overlay'></div>
+        <div class='content'>
+            <div class='welcome'>Add airport event</div>
+            <div class='subtitle'>Insert the details for the airport event</div>
+            <form name="signup" method="post" action="#" th:action="@{/addEventAsEventManager}" th:object = "${event}">
+                <div class='input-fields'>
+                    <input type="text" th:field="*{idAirplane}" name="idAirplane" placeholder="idAirplane" class='input-line full-width'required="">
+                    <input type="datetime-local" th:field="*{startDate}" name="start" placeholder="2020-04-23 18:25:44" class='input-line full-width'required="">
+                    <input type="datetime-local" th:field="*{endDate}" name="end" placeholder="2020-04-24 18:25:44" class='input-line full-width'required="">
+                    <input type="text" th:field="*{startLocation}" name="startLoc" placeholder="startLocation" class='input-line full-width'required="">
+                    <input type="text" th:field="*{endLocation}" name="endLoc" placeholder="endLocation" class='input-line full-width'required="">
+                    <input type="text" th:field="*{numberOfPassengers}" name="num" placeholder="numberOfPassengers" class='input-line full-width'required="">
+                    <input type="text" th:field="*{luggageWeight}" name="luggageWeight" placeholder="luggageWeight" class='input-line full-width'required="">
+                    <input type="text" th:field="*{status}" name="status" placeholder="status" class='input-line full-width'required="">
+                    <input type="text" th:field="*{type}" name="type" placeholder="type" class='input-line full-width'required="">
+                </div>
+                <div>
+                    <button class='ghost-round full-width'>Add Event</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
